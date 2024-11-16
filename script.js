@@ -6,16 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let cardsWon = [];
 
     const cardArray = [
-        { name: 'card1', img: 'images/Cat.png' },
-        { name: 'card1', img: 'images/Cat.png' },
-        { name: 'card2', img: 'images/Dog.png' },
-        { name: 'card2', img: 'images/Dog.png' },
-        { name: 'card3', img: 'images/Monkey.png' },
-        { name: 'card3', img: 'images/Monkey.png' },
-        { name: 'card4', img: 'images/Squirrel.png' },
-        { name: 'card4', img: 'images/Squirrel.png' },
-        { name: 'card5', img: 'images/Duck.png' },
-        { name: 'card5', img: 'images/Duck.png' },
+        { name: 'card1', img: 'photos/Cat.png' },
+        { name: 'card1', img: 'photos/Cat.png' },
+        { name: 'card2', img: 'photos/Dog.png' },
+        { name: 'card2', img: 'photos/Dog.png' },
+        { name: 'card3', img: 'photos/Monkey.png' },
+        { name: 'card3', img: 'photos/Monkey.png' },
+        { name: 'card4', img: 'photos/Squirrel.png' },
+        { name: 'card4', img: 'photos/Squirrel.png' },
+        { name: 'card5', img: 'photos/Duck.png' },
+        { name: 'card5', img: 'photos/Duck.png' },
         // ...add more pairs as needed
     ];
 
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (let i = 0; i < cardArray.length; i++) {
             const card = document.createElement('img');
-            card.setAttribute('src', 'images/blank.png');
+            card.setAttribute('src', 'photos/blank.png');
             card.setAttribute('data-id', i);
             card.addEventListener('click', flipCard);
             grid.appendChild(card);
@@ -61,8 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
             cards[secondCardId].removeEventListener('click', flipCard);
             cardsWon.push(cardsChosen);
         } else {
-            cards[firstCardId].setAttribute('src', 'images/blank.png');
-            cards[secondCardId].setAttribute('src', 'images/blank.png');
+            cards[firstCardId].setAttribute('src', 'photos/blank.png');
+            cards[secondCardId].setAttribute('src', 'photos/blank.png');
         }
 
         cardsChosen = [];
